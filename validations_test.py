@@ -10,4 +10,7 @@ class TestValidateUser(unittest.TestCase):
     def test_too_short(self):
         self.assertEqual(validate_user('inv', 5), False)
 
+    def test_invalid_characters(self):
+        self.assertEqual(validate_user('invalid_user', 1), False)
+
 unittest.main()
